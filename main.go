@@ -6,14 +6,14 @@ import (
 )
 const (
     ChatAreaColor = iota
-    InputAreaColor 
+    InputAreaColor
 )
 func main() {
     scr,_ := gc.Init()
-    defer gc.End() 
+    defer gc.End()
 
     rows, cols := scr.Maxyx()
-    
+
     gc.InitPair(ChatAreaColor, gc.C_WHITE, gc.C_BLACK)
     gc.InitPair(InputAreaColor, gc.C_BLACK, gc.C_WHITE)
 
@@ -78,5 +78,5 @@ func main() {
         inputArea.Clear()
         inputArea.MovePrint(0, 0, buffer)
     }
-    
+
 }
